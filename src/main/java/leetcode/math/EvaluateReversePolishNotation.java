@@ -11,7 +11,7 @@ import java.util.Stack;
  * 
  */
 
-//  Reverse Polish calculators do not need expressions to be parenthesized.
+// Reverse Polish calculators do not need expressions to be parenthesized.
 public class EvaluateReversePolishNotation {
 
 	// O(N), O(N) space
@@ -24,7 +24,7 @@ public class EvaluateReversePolishNotation {
 			} catch (NumberFormatException e) {
 				int num2 = stack.pop();
 				int num1 = stack.pop();
-				switch (s) {  //switch on String valid after JDK 1.7
+				switch (s) { // switch on String valid after JDK 1.7
 					case "+":
 						stack.push(num1 + num2);
 						break;
