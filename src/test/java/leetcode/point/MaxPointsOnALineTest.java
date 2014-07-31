@@ -41,6 +41,7 @@ public class MaxPointsOnALineTest {
 		{
 				new Point(0, 0), new Point(0, 0), new Point(1, 1), new Point(1, 1)
 		};
+		Assert.assertEquals(test.maxPoints(null), 0);
 		Assert.assertEquals(test.maxPoints(input1), 0);
 		Assert.assertEquals(test.maxPoints(input2), 1);
 		Assert.assertEquals(test.maxPoints(input3), 3);

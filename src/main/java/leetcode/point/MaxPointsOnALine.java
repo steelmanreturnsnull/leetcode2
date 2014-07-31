@@ -12,9 +12,10 @@ import leetcode.model.Point;
 public class MaxPointsOnALine {
 	// O(N^2), O(N) space
 	public int maxPoints(Point[] points) {
-		int global_max = 0;
-		if (points.length == 0)
+		if (points == null || points.length == 0)
 			return 0;
+
+		int global_max = 0;
 		for (Point p1 : points) {
 			int local_max = 0;
 			Map<Double, Integer> map = new HashMap<>();
