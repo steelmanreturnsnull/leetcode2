@@ -11,6 +11,7 @@ public class LinkedListCycleTestII {
 	@Test
 	public void test() {
 		Assert.assertEquals(test.detectCycle(null), null);
+		Assert.assertEquals(test.detectCycle(ListNode.buildFromString("{1}")), null);
 		Assert.assertEquals(test.detectCycle(ListNode.buildFromString("{1,2,3}")), null);
 		Assert.assertEquals(test.detectCycle(ListNode.buildFromString("{1,2,3,2,3}")), null);
 
