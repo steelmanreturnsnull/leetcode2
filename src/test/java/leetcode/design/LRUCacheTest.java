@@ -1,4 +1,4 @@
-package leetcode.desgin;
+package leetcode.design;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
