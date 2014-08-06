@@ -7,7 +7,7 @@ import java.util.Stack;
 import leetcode.model.TreeNode;
 
 /**
- * Given a binary tree, return the preorder traversal of its nodes' values.
+ * Given a binary tree, return the inorder traversal of its nodes' values.
  * 
  * For example: Given binary tree {1,#,2,3}, 
  * 1 
@@ -15,29 +15,29 @@ import leetcode.model.TreeNode;
  *   2 
  *  / 
  * 3 
- * return [1,2,3].
+ * return [1,3,2].
  * 
  * Note: Recursive solution is trivial, could you do it iteratively?
  * 
  */
-public class BinaryTreePreorderTraversal {
-	
+public class BinaryTreeInorderTraversal {
 	// O(N), O(lgN) space
-	public List<Integer> preorderTraversal(TreeNode root) {
-
+	public List<Integer> inorderTraversal(TreeNode root) {
 		List<Integer> result = new ArrayList<>();
 		Stack<TreeNode> stack = new Stack<>();
 
 		while (!stack.isEmpty() || root != null) {
 			if (root != null) {
-				result.add(root.val);
-				if (root.right != null)
-					stack.push(root.right);
-				root = root.left; // same as push right, then push left, then pop (thus root = root.left)
-			} else
+				stack.add(root);
+				root = root.left;
+			} else {
 				root = stack.pop();
+				result.add(root.val);
+				root = root.right;
+			}
 		}
 
 		return result;
 	}
+
 }
