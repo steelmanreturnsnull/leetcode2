@@ -22,7 +22,7 @@ import leetcode.model.TreeNode;
  */
 public class BinaryTreeInorderTraversal {
 	// O(N), O(lgN) space
-	public List<Integer> inorderTraversal(TreeNode root) {
+	public List<Integer> inorderTraversal(TreeNode root) { 
 		List<Integer> result = new ArrayList<>();
 		Stack<TreeNode> stack = new Stack<>();
 
