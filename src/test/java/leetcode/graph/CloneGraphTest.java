@@ -1,10 +1,9 @@
 package leetcode.graph;
 
+import leetcode.model.UndirectedGraphNode;
+
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
-import leetcode.graph.CloneGraph;
-import leetcode.model.UndirectedGraphNode;
 
 public class CloneGraphTest {
 	CloneGraph	test	= new CloneGraph();

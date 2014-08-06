@@ -1,7 +1,6 @@
 package leetcode.point;
 
 import leetcode.model.Point;
-import leetcode.point.MaxPointsOnALine;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;

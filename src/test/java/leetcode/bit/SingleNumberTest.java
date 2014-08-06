@@ -1,7 +1,5 @@
 package leetcode.bit;
 
-import leetcode.bit.SingleNumber;
-
 import org.testng.Assert;
 import org.testng.annotations.Test;
 

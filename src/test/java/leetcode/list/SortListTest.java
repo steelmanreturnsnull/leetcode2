@@ -1,6 +1,5 @@
 package leetcode.list;
 
-import leetcode.list.SortList;
 import leetcode.model.ListNode;
 
 import org.testng.Assert;

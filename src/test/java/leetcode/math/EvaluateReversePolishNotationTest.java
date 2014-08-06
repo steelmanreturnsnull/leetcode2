@@ -1,7 +1,5 @@
 package leetcode.math;
 
-import leetcode.math.EvaluateReversePolishNotation;
-
 import org.testng.Assert;
 import org.testng.annotations.Test;
 

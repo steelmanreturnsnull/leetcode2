@@ -3,8 +3,6 @@ package leetcode.design;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import leetcode.design.LRUCache;
-
 public class LRUCacheTest {
 
 	@Test

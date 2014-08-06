@@ -3,8 +3,6 @@ package leetcode.word;
 import java.util.HashSet;
 import java.util.Set;
 
-import leetcode.word.WordBreak;
-
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
