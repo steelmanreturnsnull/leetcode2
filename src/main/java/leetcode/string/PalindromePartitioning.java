@@ -41,8 +41,7 @@ public class PalindromePartitioning {
 
 	// H(n) = H(n-1) + H(n-2) + ... + H(1) + O(N)
 	// H(n-1) = H(n-2) + ... + H(1) + O(N)
-	// H(n) = 2H(n-1) + O(N)
-	// H(n) = O(n * 2^n) ??
+	// H(n) = 2H(n-1) + O(N) = 4H(n-2) + O(N) = 2^n H(1) + O(N) = O(n * 2^n)
 	private void dfs(String s, int start, List<List<String>> result, List<String> current, boolean[][] isP) {
 		if (start == s.length()) {
 			result.add(new ArrayList<>(current));
