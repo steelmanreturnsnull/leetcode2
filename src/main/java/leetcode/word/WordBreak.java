@@ -22,7 +22,7 @@ public class WordBreak {
 		if (s == null || s.length() == 0)
 			return true;
 
-		boolean[] contained = new boolean[s.length() + 1];
+		boolean[] contained = new boolean[s.length() + 1]; // is there a path from 0 to n-1
 
 		contained[0] = true;
 		for (int i = 1; i <= s.length(); i++) {

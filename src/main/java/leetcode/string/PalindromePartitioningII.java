@@ -33,6 +33,7 @@ public class PalindromePartitioningII {
 			}
 		}
 
+		// min cut from n to end
 		int minCut[] = new int[s.length()]; // 1-D array, much faster!! **Very important
 		for (int i = s.length() - 1; i >= 0; i--) {
 			if (!isP[i][s.length() - 1]) {
