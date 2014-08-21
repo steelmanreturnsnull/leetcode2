@@ -43,31 +43,23 @@ public class TreeNode {
 		StringBuilder sb = new StringBuilder();
 		sb.append("{");
 
-		String toProcess = toStringHepler(this);
-		while (toProcess.endsWith("#") || toProcess.endsWith(",")) {
+		LinkedList<TreeNode> queue = new LinkedList<>();
+		queue.add(this);
+		while (!queue.isEmpty()) {
+			TreeNode curr = queue.pop();
+			if (curr == null) {
+				sb.append(nullTree).append(",");
+			} else {
+				sb.append(curr.val).append(",");
+				queue.add(curr.left);
+				queue.add(curr.right);
+			}
+		}
+		String toProcess = sb.toString();
+		while (toProcess.endsWith(nullTree) || toProcess.endsWith(",")) {
 			toProcess = toProcess.substring(0, toProcess.length() - 1);
 		}
-		sb.append(toProcess);
-		sb.append("}");
-		return sb.toString();
+		toProcess += "}";
+		return toProcess;
 	}
-
-	private String toStringHepler(TreeNode node) {
-
-		if (node == null)
-			return nullTree;
-		StringBuilder sb = new StringBuilder();
-		sb.append(node.val).append(",").append(toStringHepler(node.left)).append(",").append(toStringHepler(node.right));
-		return sb.toString();
-	}
-
-	public static void main(String[] args) {
-		TreeNode a = new TreeNode(1);
-		TreeNode b = new TreeNode(2);
-		TreeNode c = new TreeNode(3);
-		a.right = b;
-		b.left = c;
-		System.out.println(TreeNode.buildFromString("{1,#,2,3}"));
-	}
-
 }
